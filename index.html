@@ -5,36 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scott Blackwood - Resume</title>
     <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body class="body-container">
     <div class="main-container">
         <!-- Header Section -->
         <header class="header">
-            <h1 class="title">SCOTT BLACKWOOD</h1>
-            <h4 class="subtitle">Software/Data Engineer</h4>
-            
-            <div class="contact-info">
-                <a href="mailto:sdblackwood@protonmail.com" class="contact-link">
-                    sdblackwood@protonmail.com
-                </a>
-                <span class="contact-text">07492859922</span>
-                <span class="contact-text">Glasgow, United Kingdom</span>
+            <div class="header-content">
+                <div class="header-text">
+                    <h1 class="title">SCOTT BLACKWOOD</h1>
+                    <h4 class="subtitle">Software/Data Engineer</h4>
+                    
+                    <div class="contact-info">
+                        <a href="mailto:sdblackwood@protonmail.com" class="contact-link">
+                            <i class="fas fa-envelope"></i> sdblackwood@protonmail.com
+                        </a>
+                        <span class="contact-text">
+                            <i class="fas fa-phone"></i> 07492859922
+                        </span>
+                        <span class="contact-text">
+                            <i class="fas fa-map-marker-alt"></i> Glasgow, United Kingdom
+                        </span>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/sdblackwood/" class="social-link">
+                            <i class="fab fa-linkedin"></i> LinkedIn
+                        </a>
+                        <a href="https://x.com/_sdblackwood" class="social-link">
+                            <i class="fab fa-x-twitter"></i> X/Twitter
+                        </a>
+                        <a href="https://github.com/SDBlackwood" class="social-link">
+                            <i class="fab fa-github"></i> GitHub
+                        </a>
+                    </div>
+                </div>
+                <div class="header-image">
+                    <img src="Profile.jpeg" alt="Scott Blackwood" class="profile-image">
+                </div>
             </div>
             
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/sdblackwood/" class="social-link">LinkedIn</a>
-                <a href="https://x.com/_sdblackwood" class="social-link">X/Twitter</a>
-                <a href="https://github.com/SDBlackwood" class="social-link">GitHub</a>
-            </div>
-
-            <br>
-
             <div>
-                <h4 class="subtitle">Executive Summary</h4>
+                <div class="job-header grey-bg-header">
+                    <h3 class="job-title">Executive Summary</h3>
+                </div>  
                 <p>
-                    I am an experienced software and data engineer with 8 years experience.
-                    I am looking to build a deep and robust career in and in support of machine learning and AI applications.
-                    I mix an excellent technical aptitude with an intuition of team managment and organistaion.                     
+                    I am an experienced software and data engineer with 8 years experience. I have strong skills in Go & Python building 
+                    backend services for machine learning and AI applications.
+                    I mix an excellent technical aptitude with an intuition for team managment and organistaion.                     
+                    I am looking for a company with smart and interesting people in a complex problem space to grow my skills as I move into a technical leadership role.
                 </p>
             </div>
         </header>
@@ -46,11 +65,11 @@
                 <h2 class="section-title">WORK EXPERIENCE</h2>
                 
                 <div class="job">
-                    <div class="job-header">
+                    <div class="job-header grey-bg-header">
                         <h3 class="job-title">Backend Software Engineer</h3>
                         <div class="job-period">
-                            <span>Jul 2022 - current</span>
-                            <span class="job-location">Remote, United Kingdom</span>
+                            <span><i class="far fa-calendar-alt"></i> Jul 2022 - current</span>
+                            <span class="job-location"><i class="fas fa-map-pin"></i> Remote, United Kingdom</span>
                         </div>
                     </div>
                     <h4 class="company-name"><a href="https://adarga.ai/">Adarga</a></h4>
@@ -58,18 +77,20 @@
                         <li>Developed & maintained backend microservices, data science models and CI tooling using Go, Python, gRPC, Kafka, Elastic Search, Postgres, Kubernetes & k8s.</li>
                         <li>Developed a centralised inference cluster used to perform data extraction using models & services being executed by workflows using Flyte.</li>
                         <li>Productionised data extraction and inference workflow orchestration pipelines in multiple areas including entity & disambiguation, text extraction, transcription and translation components.</li>
+                        <li>Developed a Kubernetes operator in Go to manage the lifecycle of a custom Flyte resources.</li>
                         <li>Analysed model component performance and throughput using Prometheus metrics, Grafana dashboards.</li>
                         <li>Optimised pipeline performance to achieve processing throughput of 10 thousand documents per hour and average latency of 3 minutes per document.</li>
                         <li>Handled processing spikes within an acceptable time by adding Keda model replica scaling configuration.</li>
+                        <li>Refactored a mobile applications backend data processing and developed both gRPC/REST APIs in Go.</li>
                     </ul>
                 </div>
 
                 <div class="job">
-                    <div class="job-header">
+                    <div class="job-header grey-bg-header">
                         <h3 class="job-title">Senior Software Engineer</h3>
                         <div class="job-period">
-                            <span>Aug 2020 - Jun 2022</span>
-                            <span class="job-location">United Kingdom, Remote</span>
+                            <span><i class="far fa-calendar-alt"></i> Aug 2020 - Jun 2022</span>
+                            <span class="job-location"><i class="fas fa-map-pin"></i> United Kingdom, Remote</span>
                         </div>
                     </div>
                     <a href="https://mydex.org/">
@@ -85,22 +106,22 @@
                 </div>
 
                 <div class="job">
-                    <div class="job-header">
+                    <div class="job-header grey-bg-header">
                         <h3 class="job-title">Software Engineer</h3>
                         <div class="job-period">
-                            <span>Apr 2019 - Aug 2020</span>
-                            <span class="job-location">Glasgow, United Kingdom</span>
+                            <span><i class="far fa-calendar-alt"></i> Apr 2019 - Aug 2020</span>
+                            <span class="job-location"><i class="fas fa-map-pin"></i> Glasgow, United Kingdom</span>
                         </div>
                     </div>
                     <h4 class="company-name">Mydex CIC</h4>
                 </div>
 
                 <div class="job">
-                    <div class="job-header">
+                    <div class="job-header grey-bg-header">
                         <h3 class="job-title">Technical Consultant</h3>
                         <div class="job-period">
-                            <span>August 2017 - April 2019</span>
-                            <span class="job-location">Glasgow, United Kingdom</span>
+                            <span><i class="far fa-calendar-alt"></i> August 2017 - April 2019</span>
+                            <span class="job-location"><i class="fas fa-map-pin"></i> Glasgow, United Kingdom</span>
                         </div>
                     </div>
                     <h4 class="company-name">Verint</h4>
@@ -115,20 +136,20 @@
                     <div class="education-item">
                         <h3 class="education-title">Master of Science - Data Science</h3>
                         <p class="education-details">University of Glasgow</p>
-                        <p class="education-period">Sep 2019 - Mar 2022</p>
+                        <p class="education-period"><i class="far fa-calendar-alt"></i> Sep 2019 - Mar 2022</p>
                     </div>
 
                     <div class="education-item">
                         <h3 class="education-title">Master of Science - Software Development</h3>
                         <p class="education-details">University of Glasgow</p>
-                        <p class="education-period">Jan 2016 - Dec 2017</p>
+                        <p class="education-period"><i class="far fa-calendar-alt"></i> Jan 2016 - Dec 2017</p>
                     </div>
 
                     <div class="education-item">
                         <h3 class="education-title">Bachelor of Science</h3>
                         <p class="education-details">Audio Technology with Multimedia</p>
                         <p class="education-details">Glasgow Caledonian University</p>
-                        <p class="education-period">Jan 2008 - Dec 2010</p>
+                        <p class="education-period"><i class="far fa-calendar-alt"></i> Jan 2008 - Dec 2010</p>
                     </div>
                 </div>
             </section>
