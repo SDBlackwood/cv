@@ -58,14 +58,12 @@ body {
 }
 
 /* Header styles */
-.header {
-    padding: 2rem 1.5rem;
-}
-
 .header-content {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    padding: 2rem 1.5rem 1rem 1.5rem;
+    margin-bottom: 0;
 }
 
 .header-text {
@@ -154,7 +152,19 @@ body {
 
 /* Main content styles */
 .main-content {
-    padding: 0.75rem 1.5rem 2rem 1.5rem;
+    padding: 0;
+}
+
+.main-content > .header-content {
+    padding: 2rem 1.5rem 1rem 1.5rem;
+}
+
+.main-content > div:has(.job-header.grey-bg-header:first-child) {
+    padding: 0 1.5rem 1rem 1.5rem;
+}
+
+.main-content > .section {
+    padding: 0 1.5rem;
 }
 
 .section {
@@ -272,10 +282,11 @@ i.fas, i.far, i.fab {
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .header-content {
+    .main-content > .header-content {
         flex-direction: column;
         align-items: center;
         text-align: center;
+        padding: 1.5rem 1rem 1rem 1rem;
     }
 
     .header-image {
@@ -309,12 +320,16 @@ i.fas, i.far, i.fab {
         margin-left: 0;
     }
 
-    .main-content {
-        padding: 0.75rem 1rem 2rem 1rem;
+    .main-content > .header-content {
+        padding: 1.5rem 1rem 1rem 1rem;
     }
 
-    .header {
-        padding: 1.5rem 1rem;
+    .main-content > div:has(.job-header.grey-bg-header:first-child) {
+        padding: 0 1rem 1rem 1rem;
+    }
+
+    .main-content > .section {
+        padding: 0 1rem;
     }
 
     .title {
@@ -362,9 +377,20 @@ i.fas, i.far, i.fab {
 
 /* Print styles */
 @media print {
+    @page {
+        size: A4;
+        margin: 0.5cm;
+    }
+
+    * {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
     .body-container {
         padding: 0;
         background-color: white;
+        margin: 0;
     }
 
     .main-container {
@@ -372,37 +398,36 @@ i.fas, i.far, i.fab {
         margin: 0;
         box-shadow: none;
         border-radius: 0;
+        border: none;
     }
 
-    .header {
-        padding: 2rem;
+    .main-content {
+        padding: 0 !important;
+        margin: 0 !important;
     }
 
-    .header-content {
+    .main-content > .header-content {
+        padding: 1rem 1rem 0.5rem 1rem;
         display: flex;
         flex-direction: row;
         align-items: flex-start;
     }
 
+    .main-content > div:has(.job-header.grey-bg-header:first-child) {
+        padding: 0 1rem 0.5rem 1rem;
+    }
+
+    .main-content > .section {
+        padding: 0 1rem;
+    }
+
     .header-image {
-        margin-left: 2rem;
+        margin-left: 1rem;
     }
 
     .profile-image {
-        width: 150px;
-        height: 150px;
-    }
-
-    .main-content {
-        padding: 0 2rem 2rem 2rem;
-    }
-
-    .section {
-        margin-bottom: 2rem;
-    }
-
-    .job {
-        margin-bottom: 1.5rem;
+        width: 120px;
+        height: 120px;
     }
 
     .job-description li {
@@ -437,6 +462,9 @@ i.fas, i.far, i.fab {
     .section-title {
         font-size: 1.8rem;
         margin-bottom: 1.5rem;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        display: inline-block !important;
     }
 
     .job-title {
